@@ -43,7 +43,7 @@
             width: 170px;
             height: 110px;
             border-radius: 50%;
-            background-image: url("../media/img2.jpg");
+            background-image: url("media/img2.jpg");
             margin: 17px;
             box-shadow: 1px black;
             background-position: center;
@@ -59,65 +59,85 @@
 
         }
 
-      #prod-pic, #desc{
+        #prod-pic,
+        #desc {
             float: left;
         }
 
-        .small{
+        .small {
             width: 60px;
             height: 60px;
             margin: 3px;
         }
-        #prod-pic{
-            margin : 20px 10px;
+
+        #prod-pic {
+            margin: 20px 10px;
         }
-        #small-img img:hover{
+
+        #small-img img:hover {
             cursor: pointer;
         }
-        #small-img{
+
+        #small-img {
             margin-top: 10px;
         }
-        #desc{
+
+        #desc {
             width: 300px;
             margin-top: 20px;
         }
-        #desc ul{
+
+        #desc ul {
             list-style: none;
         }
+
         #desc li {
             font-size: 15px;
             line-height: 1.7;
         }
-        .blue-txt{
-            color : blue;
+
+        .blue-txt {
+            color: blue;
             font-weight: bold;
         }
-        #desc button{
-            margin : 20px 0PX;
+
+        #desc button {
+            margin: 20px 0PX;
             width: 100%;
             padding: 10px;
-            
+
         }
-        #desc a{
+
+        #desc a {
             text-decoration: none;
         }
-        #desc1{
+
+        #desc1 {
             clear: both;
             padding-top: 30px;
             display: none;
-            
-             
+
+
         }
-        #desc1 h2{
+
+        #desc1 h2 {
             color: rgb(156, 156, 155);
         }
+
         #tr {
-            border: 4px solid brown; 
-            border-collapse: collapse; 
-            text-align: center; 
+            border: 4px solid brown;
+            border-collapse: collapse;
+            text-align: center;
             padding: 4px 12px;
         }
-    
+
+        .time {
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            color: rgb(43, 43, 153);
+           
+        }
     </style>
 </head>
 
@@ -168,27 +188,32 @@
                     </th>
                 </tr>
                 <table>
-                <tr id="td">
-                    <th>학교명</th>
-                    <th>기간</th>
-                    <th>학과</th>
-                    <th>비고</th>
-                </tr>
-                   <tr>
-                    <th>d</th>
-                    <th>d</th>
-                    <th>d</th>
-                    <th>d</th>
-                </tr>
-                   <tr>
-                    <th>d</th>
-                    <th>d</th>
-                    <th>d</th>
-                    <th>d</th>
-                </tr>
+                    <tr id="td">
+                        <th>학교명</th>
+                        <th>기간</th>
+                        <th>학과</th>
+                        <th>비고</th>
+                    </tr>
+                    <tr>
+                        <th>d</th>
+                        <th>d</th>
+                        <th>d</th>
+                        <th>d</th>
+                    </tr>
+                    <tr>
+                        <th>d</th>
+                        <th>d</th>
+                        <th>d</th>
+                        <th>d</th>
+                    </tr>
                 </table>
             </table>
+            <div id="container">
+            <div class="time"></div>
         </div>
+        </div>
+
+        
     </div>
 
 
@@ -204,4 +229,13 @@
             obj.style.display = "block";
         }
     }
+    setInterval(() => {
+        let datetime = new Date();
+        let obj = document.querySelector(".time");
+        let time =
+            datetime.getHours() + " : "
+            + datetime.getMinutes() + " : "
+            + datetime.getSeconds();
+        obj.innerHTML = time;
+    }, 1000);
 </script>
