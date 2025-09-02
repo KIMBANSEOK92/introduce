@@ -1,15 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        #container {
+            width: 800px;
+            margin: 10px auto;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: minmax(100px, auto);
+        }
+
+        #sidebar1 {
+            width: 28%;
+            height: 800px;
+            float: left;
+            border: 1px solid rgb(105, 105, 105);
+            box-sizing: border-box;
+
+        }
+
+        #sidebar2 {
+            width: 72%;
+            height: 800px;
+            float: right;
+            border: 1px solid rgb(0, 0, 0);
+            box-sizing: border-box;
+
+        }
+
+        .color1 {
+            background-color: rgb(187, 187, 187);
+        }
+
+        .color2 {
+            background-color: rgb(230, 230, 230);
+        }
+
+        .box {
+            width: 170px;
+            height: 110px;
+            border-radius: 50%;
+            background-image: url("../media/img2.jpg");
+            margin: 17px;
+            box-shadow: 1px black;
+            background-position: center;
+            text-align: center;
+            padding: 10px;
+        }
+
+        #h2 {
+            text-align: center;
+            padding: 100px 2px;
+            color: rgb(0, 0, 0);
 
 
+        }
+
+      #prod-pic, #desc{
+            float: left;
+        }
+
+        .small{
+            width: 60px;
+            height: 60px;
+            margin: 3px;
+        }
+        #prod-pic{
+            margin : 20px 10px;
+        }
+        #small-img img:hover{
+            cursor: pointer;
+        }
+        #small-img{
+            margin-top: 10px;
+        }
+        #desc{
+            width: 300px;
+            margin-top: 20px;
+        }
+        #desc ul{
+            list-style: none;
+        }
+        #desc li {
+            font-size: 15px;
+            line-height: 1.7;
+        }
+        .blue-txt{
+            color : blue;
+            font-weight: bold;
+        }
+        #desc button{
+            margin : 20px 0PX;
+            width: 100%;
+            padding: 10px;
+            
+        }
+        #desc a{
+            text-decoration: none;
+        }
+        #desc1{
+            clear: both;
+            padding-top: 30px;
+            display: none;
+            
+             
+        }
+        #desc1 h2{
+            color: rgb(156, 156, 155);
+        }
+        #tr {
+            border: 4px solid brown; 
+            border-collapse: collapse; 
+            text-align: center; 
+            padding: 4px 12px;
+        }
+    
     </style>
 </head>
+
 <body>
-  자기소개 페이지 
+    <div id="container">
+        <div id="sidebar1" class="color1">
+            <div class="box" style="background-size: cover;">
+                <h2 id="h2">
+                    <span>Kim Ban Seok</span>
+                </h2>
+                <hr>
+                <tr>
+                    <th><span style="color: rgb(197, 13, 13); text-align: center;">어서오세요!</span></th>
+                    <th><span style="color: rgb(238, 235, 45);">방문을 환영합니다</span></th>
+                </tr>
+                <hr>
+                <tr>
+                    <th><a href="https://www.naver.com">이메일 : scv9364@naver.com</a></th>
+                </tr>
+                <hr>
+                <tr>
+                    <th>Tel : 010-9xxx-xxx4</th>
+                </tr>
+                <hr>
+                <tr>
+                    <th><a href="https://open.kakao.com/o/sqAo6mMh">카카오 문의 : https://open.kakao.com/
+                            o/sqAo6mMh</a></th>
+                </tr>
+                <hr>
+
+            </div>
+        </div>
+
+        <div id="sidebar2" class="color2">
+            <h2 style="text-align: center;">자기 소개</h2>
+            <ul style="color: rgb(12, 3, 19);">
+                <li>개발자 ing</li>
+                <li>java, HTML, oracle, JavaScript ing</li>
+                <li>국내 개발자 취업 ing</li>
+                <li>국제취 ing</li>
+            </ul>
+            <table>
+                <tr id="desc">
+                    <th style="padding: 2px 10px;">
+                        <span style="color: rgb(94, 7, 55);">
+                            <a href="javascript:;" onclick="fnText()">학력 사항</a>
+                        </span>
+                    </th>
+                </tr>
+                <table>
+                <tr id="td">
+                    <th>학교명</th>
+                    <th>기간</th>
+                    <th>학과</th>
+                    <th>비고</th>
+                </tr>
+                   <tr>
+                    <th>d</th>
+                    <th>d</th>
+                    <th>d</th>
+                    <th>d</th>
+                </tr>
+                   <tr>
+                    <th>d</th>
+                    <th>d</th>
+                    <th>d</th>
+                    <th>d</th>
+                </tr>
+                </table>
+            </table>
+        </div>
+    </div>
+
+
 </body>
+
 </html>
+<script>
+    function fnText() {
+        let obj = document.querySelector("#desc1");
+        if (obj.style.display == "block") {
+            obj.style.display = "none";
+        } else {
+            obj.style.display = "block";
+        }
+    }
+</script>
